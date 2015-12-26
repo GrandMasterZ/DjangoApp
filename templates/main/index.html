@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    {% if latest_question_list %}
+        <ol class="questions">
+        {% for question in latest_question_list %}
+            <nav class="question">
+            <li><a class="cl-effect-13" href={{ question.id }}>{{ question.question_text }}</a></li> Date: {{ question.pub_date }}
+            <a class="button" href={{ question.id }}/results>Results</a>
+            </nav>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+    <a class="button" href="/add_question"> Add new</a>
+</body>
+</html>
+

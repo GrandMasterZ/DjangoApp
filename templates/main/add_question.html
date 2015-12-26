@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fill the form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <form action="{% url 'main:addingQuestion' %}" method="post" id="form">
+        {% csrf_token %}
+        Fill in your question: <input type="text" id="text" name="text"> <br>
+    Select how many choices you want:
+    <select id = "myselect" class="target">
+        {% for i in "xxxxxx" %}
+            <option value="{{ forloop.counter }}" selected="selected"> {{ forloop.counter }}</option>
+        {% endfor %}
+    </select>
+    <br>
+        {% for i in "xxxxxx" %}
+            <input type="" id="{{ forloop.counter }}" name="{{ forloop.counter }}"> <br>
+        {% endfor %}
+    <input type="submit" value="im done man" />
+    </form>
+</body>
+</html>
+
+<script>
+    $( ".target" ).change(function() {
+    var sel = document.forms['form'].elements['myselect'];
+    var val = sel.value;
+        for(i=1; i<7; i++)
+        {
+            if(i>val)
+                document.getElementById(i).setAttribute("type","hidden");
+            else
+                document.getElementById(i).setAttribute("type","");
+        }
+});
+</script>

@@ -1,0 +1,83 @@
+.cl-effect-13:hover{
+  background: #47ff36;
+  color: #3e5e37;
+}
+
+.cl-effect-13 {
+  position: fixed;
+    text-decoration: none;
+}
+.question
+{
+    -webkit-box-flex: 1;
+    margin:20px;
+    padding:5px;
+    margin-left: 0px;
+    border: 2px solid #9affa8;
+    background-color: #9affa8;
+}
+
+.questions
+{
+    -webkit-box-flex: 1;
+    margin:20px;
+    padding:20px;
+    margin-left: 0px;
+    border: 4px solid #81ff1d;
+}
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 6px 18px 6px 18px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+.button:hover
+{
+    background-color:grey;
+}
+
+.radioSet
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.menu
+{
+    height: 42px;
+    background-color: limegreen;
+}
+.menu ul
+{
+    list-style: none;
+}
+.menu ul li a
+{
+    float:left;
+    text-decoration: none;
+    color: #ffffff;
+    padding:0px 40px;
+    text-align:center;
+    line-height: 42px;
+    height:42px;
+}
+
+nav ul li a:hover
+{
+    background-color: #ffffff;
+    color:limegreen;
+    border-radius: 8px;
+}
+nav ul li a.active{
+    background-color: white;
+    border-radius: 8px;
+    color: limegreen;
+}
+
+body{
+    background-color: lightgreen;
+}
